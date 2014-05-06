@@ -10,6 +10,7 @@
 		004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224C191810D50000E2F9 /* AddEditListPage.m */; };
 		004D2250191810E00000E2F9 /* SettingsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224F191810E00000E2F9 /* SettingsPage.m */; };
 		004D2253191872C70000E2F9 /* AddEditCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D2252191872C70000E2F9 /* AddEditCollectionCell.m */; };
+		004D22551918740B0000E2F9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 004D22541918740B0000E2F9 /* README.md */; };
 		00A4F50E1916DEAE0068AB66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F50D1916DEAE0068AB66 /* Foundation.framework */; };
 		00A4F5101916DEAE0068AB66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F50F1916DEAE0068AB66 /* CoreGraphics.framework */; };
 		00A4F5121916DEAE0068AB66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F5111916DEAE0068AB66 /* UIKit.framework */; };
@@ -50,6 +51,7 @@
 		004D224F191810E00000E2F9 /* SettingsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPage.m; sourceTree = "<group>"; };
 		004D2251191872C70000E2F9 /* AddEditCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditCollectionCell.h; sourceTree = "<group>"; };
 		004D2252191872C70000E2F9 /* AddEditCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditCollectionCell.m; sourceTree = "<group>"; };
+		004D22541918740B0000E2F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		00A4F50A1916DEAE0068AB66 /* Swipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A4F50D1916DEAE0068AB66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00A4F50F1916DEAE0068AB66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +114,7 @@
 		00A4F5011916DEAD0068AB66 = {
 			isa = PBXGroup;
 			children = (
+				004D22541918740B0000E2F9 /* README.md */,
 				00A4F5131916DEAE0068AB66 /* Swipe */,
 				00A4F5321916DEAE0068AB66 /* SwipeTests */,
 				00A4F50C1916DEAE0068AB66 /* Frameworks */,
@@ -289,6 +292,7 @@
 			files = (
 				00A4F5261916DEAE0068AB66 /* Images.xcassets in Resources */,
 				00A4F5181916DEAE0068AB66 /* InfoPlist.strings in Resources */,
+				004D22551918740B0000E2F9 /* README.md in Resources */,
 				00A4F5211916DEAE0068AB66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
