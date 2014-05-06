@@ -11,6 +11,7 @@
 #import "BottomCollectionView.h"
 #import "BottomCollectionViewCell.h"
 #import "AddEditListPage.h"
+@import EventKitUI;
 
 @interface TopCollectionView () < UICollectionViewDataSource, UICollectionViewDelegate , UITextFieldDelegate , AddEditListPageDelegate >
 
@@ -189,6 +190,14 @@
 
     if ([indexPath compare:centerIndex] == NSOrderedSame) {
         NSLog(@"Should enter editing mode");
+        
+        EKEvent *event = [EKEvent eventWithEventStore:self.eventStore];
+        
+        EKEventEditViewController *editor = [[EKEventEditViewController alloc] init];
+        
+        [editor setEditViewDelegate:self];
+        [editor setEventStore:self.eventStore];
+        [editor setEvent:event];
     }else{
         [collectionView scrollToItemAtIndexPath:indexPath
                                atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
