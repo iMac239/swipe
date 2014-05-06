@@ -7,12 +7,20 @@
 //
 
 #import "SWAppDelegate.h"
-
+#import "MKiCloudSync.h"
+@import EventKit;
 @implementation SWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    EKEventStore *store = [[EKEventStore alloc] init];
+
+    [store requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
+        NSLog(@"%d          %@",granted,error);
+    }];
+
+    [MKiCloudSync start];
+    
     return YES;
 }
 							

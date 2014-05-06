@@ -8,7 +8,14 @@
 
 #import "SWViewController.h"
 
+
 @interface SWViewController ()
+
+@property (strong, nonatomic) NSArray *dataArray;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *topCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *bottomCollectionView;
+@property (weak, nonatomic) IBOutlet UITextField *topBarTextField;
 
 @end
 

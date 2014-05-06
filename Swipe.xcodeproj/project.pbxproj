@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224C191810D50000E2F9 /* AddEditListPage.m */; };
+		004D2250191810E00000E2F9 /* SettingsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224F191810E00000E2F9 /* SettingsPage.m */; };
+		004D2253191872C70000E2F9 /* AddEditCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D2252191872C70000E2F9 /* AddEditCollectionCell.m */; };
 		00A4F50E1916DEAE0068AB66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F50D1916DEAE0068AB66 /* Foundation.framework */; };
 		00A4F5101916DEAE0068AB66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F50F1916DEAE0068AB66 /* CoreGraphics.framework */; };
 		00A4F5121916DEAE0068AB66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F5111916DEAE0068AB66 /* UIKit.framework */; };
@@ -21,6 +24,13 @@
 		00A4F52F1916DEAE0068AB66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A4F5111916DEAE0068AB66 /* UIKit.framework */; };
 		00A4F5371916DEAE0068AB66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00A4F5351916DEAE0068AB66 /* InfoPlist.strings */; };
 		00A4F5391916DEAE0068AB66 /* SwipeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A4F5381916DEAE0068AB66 /* SwipeTests.m */; };
+		00A4F5461916E03D0068AB66 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A4F5431916E03D0068AB66 /* MKiCloudSync.m */; };
+		00A4F5471916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A4F5451916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m */; };
+		00FDD49F1916E51A00B94DDC /* CollectionViewBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD49E1916E51A00B94DDC /* CollectionViewBaseClass.m */; };
+		00FDD4A21916E52E00B94DDC /* TopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD4A11916E52E00B94DDC /* TopCollectionView.m */; };
+		00FDD4A51916E53900B94DDC /* BottomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD4A41916E53900B94DDC /* BottomCollectionView.m */; };
+		00FDD4A81916E98200B94DDC /* TopCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD4A71916E98200B94DDC /* TopCollectionViewCell.m */; };
+		00FDD54F1916EC6400B94DDC /* BottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD54E1916EC6400B94DDC /* BottomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		004D224B191810D50000E2F9 /* AddEditListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditListPage.h; sourceTree = "<group>"; };
+		004D224C191810D50000E2F9 /* AddEditListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditListPage.m; sourceTree = "<group>"; };
+		004D224E191810E00000E2F9 /* SettingsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPage.h; sourceTree = "<group>"; };
+		004D224F191810E00000E2F9 /* SettingsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPage.m; sourceTree = "<group>"; };
+		004D2251191872C70000E2F9 /* AddEditCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditCollectionCell.h; sourceTree = "<group>"; };
+		004D2252191872C70000E2F9 /* AddEditCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditCollectionCell.m; sourceTree = "<group>"; };
 		00A4F50A1916DEAE0068AB66 /* Swipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A4F50D1916DEAE0068AB66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00A4F50F1916DEAE0068AB66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +69,20 @@
 		00A4F5341916DEAE0068AB66 /* SwipeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeTests-Info.plist"; sourceTree = "<group>"; };
 		00A4F5361916DEAE0068AB66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00A4F5381916DEAE0068AB66 /* SwipeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeTests.m; sourceTree = "<group>"; };
+		00A4F5421916E03D0068AB66 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		00A4F5431916E03D0068AB66 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
+		00A4F5441916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		00A4F5451916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		00FDD49D1916E51A00B94DDC /* CollectionViewBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewBaseClass.h; sourceTree = "<group>"; };
+		00FDD49E1916E51A00B94DDC /* CollectionViewBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewBaseClass.m; sourceTree = "<group>"; };
+		00FDD4A01916E52E00B94DDC /* TopCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCollectionView.h; sourceTree = "<group>"; };
+		00FDD4A11916E52E00B94DDC /* TopCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCollectionView.m; sourceTree = "<group>"; };
+		00FDD4A31916E53900B94DDC /* BottomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCollectionView.h; sourceTree = "<group>"; };
+		00FDD4A41916E53900B94DDC /* BottomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionView.m; sourceTree = "<group>"; };
+		00FDD4A61916E98200B94DDC /* TopCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCollectionViewCell.h; sourceTree = "<group>"; };
+		00FDD4A71916E98200B94DDC /* TopCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCollectionViewCell.m; sourceTree = "<group>"; };
+		00FDD54D1916EC6400B94DDC /* BottomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewCell.h; sourceTree = "<group>"; };
+		00FDD54E1916EC6400B94DDC /* BottomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +147,23 @@
 				00A4F51F1916DEAE0068AB66 /* Main.storyboard */,
 				00A4F5221916DEAE0068AB66 /* SWViewController.h */,
 				00A4F5231916DEAE0068AB66 /* SWViewController.m */,
+				00FDD49D1916E51A00B94DDC /* CollectionViewBaseClass.h */,
+				00FDD49E1916E51A00B94DDC /* CollectionViewBaseClass.m */,
+				00FDD4A01916E52E00B94DDC /* TopCollectionView.h */,
+				00FDD4A11916E52E00B94DDC /* TopCollectionView.m */,
+				00FDD4A61916E98200B94DDC /* TopCollectionViewCell.h */,
+				00FDD4A71916E98200B94DDC /* TopCollectionViewCell.m */,
+				00FDD4A31916E53900B94DDC /* BottomCollectionView.h */,
+				00FDD4A41916E53900B94DDC /* BottomCollectionView.m */,
+				00FDD54D1916EC6400B94DDC /* BottomCollectionViewCell.h */,
+				00FDD54E1916EC6400B94DDC /* BottomCollectionViewCell.m */,
+				004D224B191810D50000E2F9 /* AddEditListPage.h */,
+				004D224C191810D50000E2F9 /* AddEditListPage.m */,
+				004D2251191872C70000E2F9 /* AddEditCollectionCell.h */,
+				004D2252191872C70000E2F9 /* AddEditCollectionCell.m */,
+				004D224E191810E00000E2F9 /* SettingsPage.h */,
+				004D224F191810E00000E2F9 /* SettingsPage.m */,
+				00A4F5481916E0400068AB66 /* 3rd Party */,
 				00A4F5251916DEAE0068AB66 /* Images.xcassets */,
 				00A4F5141916DEAE0068AB66 /* Supporting Files */,
 			);
@@ -150,6 +197,17 @@
 				00A4F5351916DEAE0068AB66 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00A4F5481916E0400068AB66 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				00A4F5421916E03D0068AB66 /* MKiCloudSync.h */,
+				00A4F5431916E03D0068AB66 /* MKiCloudSync.m */,
+				00A4F5441916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.h */,
+				00A4F5451916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m */,
+			);
+			name = "3rd Party";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +254,7 @@
 		00A4F5021916DEAD0068AB66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = SW;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Michael MacCallum";
 				TargetAttributes = {
@@ -250,9 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A4F5471916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m in Sources */,
 				00A4F5241916DEAE0068AB66 /* SWViewController.m in Sources */,
 				00A4F51E1916DEAE0068AB66 /* SWAppDelegate.m in Sources */,
+				004D2250191810E00000E2F9 /* SettingsPage.m in Sources */,
+				00A4F5461916E03D0068AB66 /* MKiCloudSync.m in Sources */,
+				004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */,
+				00FDD4A21916E52E00B94DDC /* TopCollectionView.m in Sources */,
+				00FDD4A51916E53900B94DDC /* BottomCollectionView.m in Sources */,
+				004D2253191872C70000E2F9 /* AddEditCollectionCell.m in Sources */,
+				00FDD4A81916E98200B94DDC /* TopCollectionViewCell.m in Sources */,
+				00FDD49F1916E51A00B94DDC /* CollectionViewBaseClass.m in Sources */,
 				00A4F51A1916DEAE0068AB66 /* main.m in Sources */,
+				00FDD54F1916EC6400B94DDC /* BottomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +448,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Swipe/Swipe-Prefix.pch";
 				INFOPLIST_FILE = "Swipe/Swipe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +462,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Swipe/Swipe-Prefix.pch";
 				INFOPLIST_FILE = "Swipe/Swipe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +527,7 @@
 				00A4F53E1916DEAE0068AB66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00A4F53F1916DEAE0068AB66 /* Build configuration list for PBXNativeTarget "SwipeTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +536,7 @@
 				00A4F5411916DEAE0068AB66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
