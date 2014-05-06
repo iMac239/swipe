@@ -49,9 +49,11 @@
         [cell setDisplayMode:BottomDisplayModeNormal];
         EKCalendar *calendar = [self calendarAtIndex:indexPath.row - 1];
 
-        [self requestListsFromCalendar:calendar withCompletion:^(BOOL success, NSArray *reminders) {
-            [cell setDataArray:reminders];
-        }];
+        if (calendar) {
+            [self requestListsFromCalendar:calendar withCompletion:^(BOOL success, NSArray *reminders) {
+                [cell setDataArray:reminders];
+            }];
+        }
     }
 
     return cell;

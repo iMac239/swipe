@@ -10,6 +10,6 @@
 
 @interface AddEditCollectionCell : UICollectionViewCell
 
-@property (strong, nonatomic) UIImageView *imageView
+@property (strong, nonatomic) UIImageView *imageView;
 
 @end

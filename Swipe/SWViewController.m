@@ -13,8 +13,6 @@
 
 @property (strong, nonatomic) NSArray *dataArray;
 
-@property (weak, nonatomic) IBOutlet UICollectionView *topCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *bottomCollectionView;
 @property (weak, nonatomic) IBOutlet UITextField *topBarTextField;
 
 @end
@@ -24,7 +22,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(159.0, 0.0, 2.0, 568.0)];
+//        [view setBackgroundColor:[UIColor greenColor]];
+//        [self.view addSubview:view];
+//    });
 }
 
 - (void)didReceiveMemoryWarning

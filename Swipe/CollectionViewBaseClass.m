@@ -40,7 +40,13 @@
 
 - (EKCalendar *)calendarAtIndex:(NSInteger)index
 {
-    return [self.eventStore calendarsForEntityType:EKEntityTypeReminder][index];
+    NSArray *calendars = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
+
+    if (index >= 0 && index < calendars.count) {
+        return calendars[index];
+    }
+
+    return nil;
 }
 
 - (void)requestListsFromCalendar:(EKCalendar *)calendar

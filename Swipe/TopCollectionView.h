@@ -12,5 +12,7 @@
 @interface TopCollectionView : CollectionViewBaseClass
 
 @property (weak, nonatomic) IBOutlet BottomCollectionView *otherCollectionView;
+@property (weak, nonatomic) IBOutlet UITextField *topTextField;
+@property (weak, nonatomic) IBOutlet UIView *topCollectionViewMaskContainer;
 
 @end

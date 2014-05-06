@@ -11,11 +11,7 @@
 #import "SettingsPage.h"
 @import EventKit;
 
-@interface BottomCollectionViewCell () < UITableViewDataSource, UITableViewDelegate , AddEditListPageDelegate >
-
-
-@property (strong, nonatomic) AddEditListPage *addEditListView;
-@property (strong, nonatomic) SettingsPage *settingsView;
+@interface BottomCollectionViewCell () < UITableViewDataSource, UITableViewDelegate >
 
 @end
 
@@ -79,7 +75,6 @@
     [self destroyAddEditPage];
 
     self.addEditListView = [[AddEditListPage alloc] initWithFrame:self.contentView.bounds];
-    [self.addEditListView setDelegate:self];
     [self.contentView addSubview:self.addEditListView];
 }
 

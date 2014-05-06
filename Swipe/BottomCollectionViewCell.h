@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class AddEditListPage;
+@class SettingsPage;
+
 typedef enum : NSUInteger {
     BottomDisplayModeNormal = 1 << 0,
     BottomDisplayModeAddList = 1 << 1,
@@ -19,5 +22,8 @@ typedef enum : NSUInteger {
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *dataArray;
 @property (nonatomic, assign) BottomDisplayMode displayMode;
+
+@property (strong, nonatomic) AddEditListPage *addEditListView;
+@property (strong, nonatomic) SettingsPage *settingsView;
 
 @end

@@ -12,5 +12,6 @@
 @interface BottomCollectionView : CollectionViewBaseClass
 
 @property (weak, nonatomic) IBOutlet TopCollectionView *otherCollectionView;
+@property (weak, nonatomic) IBOutlet UIView *bottomCollectionViewMaskContainer;
 
 @end
