@@ -27,6 +27,7 @@
 		00A4F5391916DEAE0068AB66 /* SwipeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A4F5381916DEAE0068AB66 /* SwipeTests.m */; };
 		00A4F5461916E03D0068AB66 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A4F5431916E03D0068AB66 /* MKiCloudSync.m */; };
 		00A4F5471916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A4F5451916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m */; };
+		00A6FE0F191A02D200ED7E48 /* ReminderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A6FE0E191A02D200ED7E48 /* ReminderTableViewCell.m */; };
 		00FDD49F1916E51A00B94DDC /* CollectionViewBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD49E1916E51A00B94DDC /* CollectionViewBaseClass.m */; };
 		00FDD4A21916E52E00B94DDC /* TopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD4A11916E52E00B94DDC /* TopCollectionView.m */; };
 		00FDD4A51916E53900B94DDC /* BottomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDD4A41916E53900B94DDC /* BottomCollectionView.m */; };
@@ -75,6 +76,8 @@
 		00A4F5431916E03D0068AB66 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		00A4F5441916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		00A4F5451916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		00A6FE0D191A02D200ED7E48 /* ReminderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderTableViewCell.h; sourceTree = "<group>"; };
+		00A6FE0E191A02D200ED7E48 /* ReminderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderTableViewCell.m; sourceTree = "<group>"; };
 		00FDD49D1916E51A00B94DDC /* CollectionViewBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewBaseClass.h; sourceTree = "<group>"; };
 		00FDD49E1916E51A00B94DDC /* CollectionViewBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewBaseClass.m; sourceTree = "<group>"; };
 		00FDD4A01916E52E00B94DDC /* TopCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCollectionView.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				00FDD4A41916E53900B94DDC /* BottomCollectionView.m */,
 				00FDD54D1916EC6400B94DDC /* BottomCollectionViewCell.h */,
 				00FDD54E1916EC6400B94DDC /* BottomCollectionViewCell.m */,
+				00A6FE0D191A02D200ED7E48 /* ReminderTableViewCell.h */,
+				00A6FE0E191A02D200ED7E48 /* ReminderTableViewCell.m */,
 				004D224B191810D50000E2F9 /* AddEditListPage.h */,
 				004D224C191810D50000E2F9 /* AddEditListPage.m */,
 				004D2251191872C70000E2F9 /* AddEditCollectionCell.h */,
@@ -317,6 +322,7 @@
 				00A4F51E1916DEAE0068AB66 /* SWAppDelegate.m in Sources */,
 				004D2250191810E00000E2F9 /* SettingsPage.m in Sources */,
 				00A4F5461916E03D0068AB66 /* MKiCloudSync.m in Sources */,
+				00A6FE0F191A02D200ED7E48 /* ReminderTableViewCell.m in Sources */,
 				004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */,
 				00FDD4A21916E52E00B94DDC /* TopCollectionView.m in Sources */,
 				00FDD4A51916E53900B94DDC /* BottomCollectionView.m in Sources */,

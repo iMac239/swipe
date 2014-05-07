@@ -14,6 +14,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UITextField appearance] setTintColor:[UIColor whiteColor]];
+    [[UITextView appearance] setTintColor:[UIColor whiteColor]];
+
     EKEventStore *eventStore = [[EKEventStore alloc] init];
 
     [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {

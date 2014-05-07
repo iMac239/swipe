@@ -9,6 +9,7 @@
 #import "BottomCollectionViewCell.h"
 #import "AddEditListPage.h"
 #import "SettingsPage.h"
+#import "ReminderTableViewCell.h"
 @import EventKit;
 
 @interface BottomCollectionViewCell () < UITableViewDataSource, UITableViewDelegate >
@@ -21,7 +22,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+
     }
     return self;
 }
@@ -109,26 +110,51 @@
     return self.dataArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (ReminderTableViewCell *)tableView:(UITableView *)tableView
+               cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"TableViewCell";
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    ReminderTableViewCell *cell = (ReminderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID
+                                                                                           forIndexPath:indexPath];
 
     EKReminder *reminder = (EKReminder *)self.dataArray[indexPath.row];
 
-    [cell.textLabel setText:reminder.title];
+
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:reminder.title attributes:[self stringAttributes]];
+    [cell.textView setAttributedText:attString];
 
     return cell;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Drawing code
+    EKReminder *reminder = (EKReminder *)self.dataArray[indexPath.row];
+    return [self heightOfCellWithText:reminder.title withAttibutes:[self stringAttributes]];
 }
-*/
+
+- (NSDictionary *)stringAttributes
+{
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+
+    NSDictionary *attributes = @{NSFontAttributeName : font, NSForegroundColorAttributeName : [UIColor whiteColor]};
+
+    return attributes;
+}
+
+- (CGFloat)heightOfCellWithText:(NSString *)text
+                  withAttibutes:(NSDictionary *)attributes
+{
+    CGSize maxSize = CGSizeMake(280.0, CGFLOAT_MAX);
+    CGFloat inset = 8.0;
+
+    CGRect frame = [text boundingRectWithSize:maxSize
+                                      options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                   attributes:attributes
+                                      context:nil];
+
+    return frame.size.height + inset + inset + 2.0; // 2 is buffer
+}
+
 
 @end
