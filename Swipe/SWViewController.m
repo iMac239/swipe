@@ -22,12 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(159.0, 0.0, 2.0, 568.0)];
-//        [view setBackgroundColor:[UIColor greenColor]];
-//        [self.view addSubview:view];
-//    });
 }
 
 - (void)didReceiveMemoryWarning

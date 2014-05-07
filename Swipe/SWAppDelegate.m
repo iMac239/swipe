@@ -8,15 +8,51 @@
 
 #import "SWAppDelegate.h"
 #import "MKiCloudSync.h"
+
 @import EventKit;
 @implementation SWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    EKEventStore *store = [[EKEventStore alloc] init];
+    EKEventStore *eventStore = [[EKEventStore alloc] init];
 
-    [store requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
+    [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
         NSLog(@"%d          %@",granted,error);
+        
+        if (granted) {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+            NSArray *calendars = [eventStore calendarsForEntityType:EKEntityTypeReminder];
+            NSArray *storedKeys = [[defaults objectForKey:@"calendarIDs"] copy];
+
+            NSMutableArray *workingArray = nil;
+
+            if (storedKeys) {
+                workingArray = [NSMutableArray arrayWithArray:storedKeys];
+            }else{
+                workingArray = [NSMutableArray new];
+            }
+
+            for (EKCalendar *calendar in calendars) {
+                if (![workingArray containsObject:calendar.calendarIdentifier]) {
+                    [workingArray addObject:calendar.calendarIdentifier];
+                }
+            }
+
+            for (NSString *calendarID in [workingArray copy]) {
+                if (![eventStore calendarWithIdentifier:calendarID]) {
+                    [workingArray removeObject:calendarID];
+
+                    if ([defaults objectForKey:calendarID]) {
+                        [defaults removeObjectForKey:calendarID];
+                    }
+                }
+            }
+
+            [defaults setObject:[workingArray copy] forKey:@"calendarIDs"];
+            [defaults synchronize];
+            NSLog(@"%@",[defaults dictionaryRepresentation]);
+        }
     }];
 
     [MKiCloudSync start];

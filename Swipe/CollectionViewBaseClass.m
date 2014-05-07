@@ -20,15 +20,28 @@
     if (self) {        
         [self setBackgroundColor:[UIColor clearColor]];
         [self setAlwaysBounceHorizontal:YES];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(eventStoreDidChange:)
+                                                     name:EKEventStoreChangedNotification
+                                                   object:nil];
     }
+
     return self;
+}
+
+- (void)eventStoreDidChange:(NSNotification *)notification
+{
+    NSLog(@"Reminder Database Changed: %@",notification.userInfo);
 }
 
 - (EKEventStore *)eventStore
 {
     if (!_eventStore) {
-        _eventStore = [EKEventStore new];
+        _eventStore = [[EKEventStore alloc] init];
     }
+
+    [_eventStore refreshSourcesIfNecessary];
 
     return _eventStore;
 }
@@ -40,10 +53,17 @@
 
 - (EKCalendar *)calendarAtIndex:(NSInteger)index
 {
-    NSArray *calendars = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-    if (index >= 0 && index < calendars.count) {
-        return calendars[index];
+    NSArray *storedKeys = [[defaults objectForKey:@"calendarIDs"] copy];
+
+    if (storedKeys) {
+        if (index >= 0 && index < storedKeys.count) {
+
+            return [self.eventStore calendarWithIdentifier:storedKeys[index]];
+        }
+
+        return nil;
     }
 
     return nil;

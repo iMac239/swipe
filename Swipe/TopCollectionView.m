@@ -148,6 +148,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
+    NSLog(@"%s                      +++++++++              %lu",__PRETTY_FUNCTION__,[self numberOfLists] + 2);
     return [self numberOfLists] + 2;
 }
 
@@ -169,13 +170,15 @@
         [cell setTag:-2];
     }else{
         EKCalendar *calendar = [self calendarAtIndex:indexPath.row - 1];
+        NSLog(@"%@",calendar.title);
+        if (calendar) {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-        if ([defaults objectForKey:calendar.calendarIdentifier]) {
-            [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%li",(long)[[defaults objectForKey:calendar.calendarIdentifier] integerValue]]]];
-        }else{
-            [cell.imageView setImage:[UIImage imageNamed:@"41"]];
+            if ([defaults objectForKey:calendar.calendarIdentifier]) {
+                [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%li",(long)[[defaults objectForKey:calendar.calendarIdentifier] integerValue]]]];
+            }else{
+                [cell.imageView setImage:[UIImage imageNamed:@"41"]];
+            }
         }
 
         [cell setTag:0];
@@ -190,14 +193,7 @@
 
     if ([indexPath compare:centerIndex] == NSOrderedSame) {
         NSLog(@"Should enter editing mode");
-        
-        EKEvent *event = [EKEvent eventWithEventStore:self.eventStore];
-        
-        EKEventEditViewController *editor = [[EKEventEditViewController alloc] init];
-        
-        [editor setEditViewDelegate:self];
-        [editor setEventStore:self.eventStore];
-        [editor setEvent:event];
+
     }else{
         [collectionView scrollToItemAtIndexPath:indexPath
                                atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
@@ -224,6 +220,7 @@
             if (self.sideScrollState != SideScrollStateLockOccurredForAddList) {
                 [self setSideScrollState:SideScrollStateLockPossibleForAddList];
             }
+            
             [self updateOtherCollectionToContentOffset:point];
             [self updateCellsToAlpha:0.0];
             [self setContentOffset:point];
@@ -299,7 +296,7 @@
 
     if (x <= -cellWidth) {
         [self setSideScrollState:SideScrollStateLockOccurredForAddList];
-    }else if (max >= 0.0) {
+    }else if (max >= cellWidth) {
         [self setSideScrollState:SideScrollStateLockOccurredForSettingsPage];
     }else if (x < 0.0 && x > -cellWidth){
         if (self.sideScrollState != SideScrollStateTransitioningToAddListLock) {
@@ -355,6 +352,8 @@
 
 - (void)createNewCalendar
 {
+    NSLog(@"ContentSize of bottom 1 : %@",NSStringFromCGSize(self.otherCollectionView.contentSize));
+    NSLog(@"Number OF LISTS 1 : %lu",[self numberOfLists]);
     TopCollectionViewCell *cell = (TopCollectionViewCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
 
     NSInteger imageNumber = 41;
@@ -385,7 +384,29 @@
     BOOL result = [self.eventStore saveCalendar:calendar commit:YES error:&error];
     if (result) {
         NSLog(@"Saved calendar to event store.");
-        [[NSUserDefaults standardUserDefaults] setObject:@(imageNumber) forKey:calendar.calendarIdentifier];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+        NSMutableArray *workingArray = nil;
+        NSArray *ids = [defaults objectForKey:@"calendarIDs"];
+
+        if (ids) {
+            workingArray = [NSMutableArray arrayWithArray:ids];
+        }else{
+            workingArray = [NSMutableArray new];
+        }
+
+        [workingArray insertObject:calendar.calendarIdentifier atIndex:0];
+
+        [defaults setObject:[workingArray copy] forKey:@"calendarIDs"];
+        [defaults setObject:@(imageNumber) forKey:calendar.calendarIdentifier];
+        [defaults synchronize];
+        
+
+        [self insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:1 inSection:0]]];
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.otherCollectionView reloadData];
+        });
     } else {
         NSLog(@"Error saving calendar: %@.", error);
     }

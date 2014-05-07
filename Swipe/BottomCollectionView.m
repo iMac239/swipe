@@ -28,16 +28,20 @@
 }
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section
 {
+    NSLog(@"%s",__PRETTY_FUNCTION__);
     return [self numberOfLists] + 2;
 }
 
-- (BottomCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (BottomCollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                      cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"BottomCollectionCell";
 
-    BottomCollectionViewCell *cell = (BottomCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    BottomCollectionViewCell *cell = (BottomCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellID
+                                                                                                           forIndexPath:indexPath];
 
     if (indexPath.row == 0) {
         [cell setDataArray:nil];
