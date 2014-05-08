@@ -1,5 +1,5 @@
 //
-//  ReminderTableViewCell.h
+//  MainListTableView.h
 //  Swipe
 //
 //  Created by Michael MacCallum on 5/7/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReminderTableViewCell : UITableViewCell
+@interface MainListTableView : UITableView
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) NSArray *reminders;
 
 @end

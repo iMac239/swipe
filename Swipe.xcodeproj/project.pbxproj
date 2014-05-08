@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003FBA83191B2FE2009A845B /* MainListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 003FBA82191B2FE2009A845B /* MainListTableView.m */; };
+		003FBA90191B6A69009A845B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 003FBA8F191B6A69009A845B /* Constants.m */; };
 		004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224C191810D50000E2F9 /* AddEditListPage.m */; };
 		004D2250191810E00000E2F9 /* SettingsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224F191810E00000E2F9 /* SettingsPage.m */; };
 		004D2253191872C70000E2F9 /* AddEditCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D2252191872C70000E2F9 /* AddEditCollectionCell.m */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003FBA81191B2FE2009A845B /* MainListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainListTableView.h; sourceTree = "<group>"; };
+		003FBA82191B2FE2009A845B /* MainListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListTableView.m; sourceTree = "<group>"; };
+		003FBA8E191B6A69009A845B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		003FBA8F191B6A69009A845B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		004D224B191810D50000E2F9 /* AddEditListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditListPage.h; sourceTree = "<group>"; };
 		004D224C191810D50000E2F9 /* AddEditListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditListPage.m; sourceTree = "<group>"; };
 		004D224E191810E00000E2F9 /* SettingsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPage.h; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 				00FDD4A41916E53900B94DDC /* BottomCollectionView.m */,
 				00FDD54D1916EC6400B94DDC /* BottomCollectionViewCell.h */,
 				00FDD54E1916EC6400B94DDC /* BottomCollectionViewCell.m */,
+				003FBA81191B2FE2009A845B /* MainListTableView.h */,
+				003FBA82191B2FE2009A845B /* MainListTableView.m */,
 				00A6FE0D191A02D200ED7E48 /* ReminderTableViewCell.h */,
 				00A6FE0E191A02D200ED7E48 /* ReminderTableViewCell.m */,
 				004D224B191810D50000E2F9 /* AddEditListPage.h */,
@@ -171,6 +179,8 @@
 				004D2252191872C70000E2F9 /* AddEditCollectionCell.m */,
 				004D224E191810E00000E2F9 /* SettingsPage.h */,
 				004D224F191810E00000E2F9 /* SettingsPage.m */,
+				003FBA8E191B6A69009A845B /* Constants.h */,
+				003FBA8F191B6A69009A845B /* Constants.m */,
 				00A4F5481916E0400068AB66 /* 3rd Party */,
 				00A4F5251916DEAE0068AB66 /* Images.xcassets */,
 				00A4F5141916DEAE0068AB66 /* Supporting Files */,
@@ -325,12 +335,14 @@
 				00A6FE0F191A02D200ED7E48 /* ReminderTableViewCell.m in Sources */,
 				004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */,
 				00FDD4A21916E52E00B94DDC /* TopCollectionView.m in Sources */,
+				003FBA90191B6A69009A845B /* Constants.m in Sources */,
 				00FDD4A51916E53900B94DDC /* BottomCollectionView.m in Sources */,
 				004D2253191872C70000E2F9 /* AddEditCollectionCell.m in Sources */,
 				00FDD4A81916E98200B94DDC /* TopCollectionViewCell.m in Sources */,
 				00FDD49F1916E51A00B94DDC /* CollectionViewBaseClass.m in Sources */,
 				00A4F51A1916DEAE0068AB66 /* main.m in Sources */,
 				00FDD54F1916EC6400B94DDC /* BottomCollectionViewCell.m in Sources */,
+				003FBA83191B2FE2009A845B /* MainListTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

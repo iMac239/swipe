@@ -8,7 +8,6 @@
 
 #import "SWAppDelegate.h"
 #import "MKiCloudSync.h"
-
 @import EventKit;
 @implementation SWAppDelegate
 

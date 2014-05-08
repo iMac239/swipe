@@ -48,7 +48,7 @@
 
         [super setSideScrollState:sideScrollState];
 
-        NSLog(@"Changing state to: %lu",sideScrollState);
+        NSLog(@"Changing state to: %lu",(unsigned long)sideScrollState);
         switch (sideScrollState) {
             case SideScrollStateNormal:{
 
@@ -148,7 +148,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    NSLog(@"%s                      +++++++++              %lu",__PRETTY_FUNCTION__,[self numberOfLists] + 2);
+    NSLog(@"%s                      +++++++++              %lu",__PRETTY_FUNCTION__,(unsigned long)[self numberOfLists] + 2);
     return [self numberOfLists] + 2;
 }
 
@@ -353,7 +353,7 @@
 - (void)createNewCalendar
 {
     NSLog(@"ContentSize of bottom 1 : %@",NSStringFromCGSize(self.otherCollectionView.contentSize));
-    NSLog(@"Number OF LISTS 1 : %lu",[self numberOfLists]);
+    NSLog(@"Number OF LISTS 1 : %lu",(unsigned long)[self numberOfLists]);
     TopCollectionViewCell *cell = (TopCollectionViewCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
 
     NSInteger imageNumber = 41;

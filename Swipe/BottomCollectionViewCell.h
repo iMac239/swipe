@@ -10,6 +10,7 @@
 
 @class AddEditListPage;
 @class SettingsPage;
+@class MainListTableView;
 
 typedef enum : NSUInteger {
     BottomDisplayModeNormal = 1 << 0,
@@ -19,7 +20,7 @@ typedef enum : NSUInteger {
 
 @interface BottomCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet MainListTableView *tableView;
 @property (strong, nonatomic) NSArray *dataArray;
 @property (nonatomic, assign) BottomDisplayMode displayMode;
 

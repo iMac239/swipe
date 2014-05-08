@@ -18,7 +18,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {        
-        [self setBackgroundColor:[UIColor clearColor]];
+//        [self setBackgroundColor:[UIColor clearColor]];
         [self setAlwaysBounceHorizontal:YES];
 
         [[NSNotificationCenter defaultCenter] addObserver:self

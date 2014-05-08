@@ -14,7 +14,11 @@
 {
     [super awakeFromNib];
 
-    [self.textView setAlwaysBounceVertical:NO];
-    [self.textView setTextContainerInset:UIEdgeInsetsMake(8.0, 15.0, 8.0, 15.0)];
+//    [self.textView setAlwaysBounceVertical:NO];
+//    [self.textView setTextContainerInset:UIEdgeInsetsMake(8.0, 15.0, 8.0, 15.0)];
+//    [self.textView setKeyboardDismissMode:UIScrollViewKeyboardDismissModeInteractive];
+//    [self.textView setReturnKeyType:UIReturnKeyDone];
+//
+//    [self.textView setPlaceholder:@"Name this shit"];
 }
 @end
