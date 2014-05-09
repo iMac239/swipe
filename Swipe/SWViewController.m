@@ -18,10 +18,28 @@
 @property (weak, nonatomic) IBOutlet UIView *topCollectionContainer;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *bottomCollectionView;
+@property (weak, nonatomic) IBOutlet UIScrollView *mainContentScrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentViewForScrollView;
 
 @end
 
 @implementation SWViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+    CGSize size = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height + 128.0);
+
+    [self.mainContentScrollView setContentSize:size];
+    [self.contentViewForScrollView setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self.contentViewForScrollView setFrame:CGRectMake(0.0, 0.0, self.mainContentScrollView.contentSize.width, self.mainContentScrollView.contentSize.height)];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -49,26 +67,26 @@
 - (void)handleSwipeNotification:(NSNotification *)notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([notification.name isEqualToString:SwipeShouldEnterEditingModeNotification]) {
-
-            [UIView animateWithDuration:0.25 animations:^{
-                [self.topBar setFrame:CGRectMake(0.0, -128.0, 320.0, 64.0)];
-                [self.topCollectionContainer setFrame:CGRectMake(0.0, -64.0, 320.0, 64.0)];
-                [self.bottomCollectionView setFrame:CGRectMake(0.0, 20.0, 320.0, 548.0)];
-                [self.bottomCollectionView.collectionViewLayout invalidateLayout];
-            } completion:^(BOOL finished) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:SwipeDidEnterEditingModeNotification object:nil];
-            }];
-
-        }else if ([notification.name isEqualToString:SwipeShouldExitEditingModeNotification]) {
-
-            [UIView animateWithDuration:0.15 animations:^{
-                [self.topBar setFrame:CGRectMake(0.0, 0.0, 320.0, 64.0)];
-                [self.topCollectionContainer setFrame:CGRectMake(0.0, 64.0, 320.0, 64.0)];
-            } completion:^(BOOL finished) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:SwipeDidExitEditingModeNotification object:nil];
-            }];
-        }
+//        if ([notification.name isEqualToString:SwipeShouldEnterEditingModeNotification]) {
+//
+//            [UIView animateWithDuration:0.25 animations:^{
+//                [self.topBar setFrame:CGRectMake(0.0, -128.0, 320.0, 64.0)];
+//                [self.topCollectionContainer setFrame:CGRectMake(0.0, -64.0, 320.0, 64.0)];
+//                [self.bottomCollectionView setFrame:CGRectMake(0.0, 20.0, 320.0, 548.0)];
+//                [self.bottomCollectionView.collectionViewLayout invalidateLayout];
+//            } completion:^(BOOL finished) {
+//                [[NSNotificationCenter defaultCenter] postNotificationName:SwipeDidEnterEditingModeNotification object:nil];
+//            }];
+//
+//        }else if ([notification.name isEqualToString:SwipeShouldExitEditingModeNotification]) {
+//
+//            [UIView animateWithDuration:0.15 animations:^{
+//                [self.topBar setFrame:CGRectMake(0.0, 0.0, 320.0, 64.0)];
+//                [self.topCollectionContainer setFrame:CGRectMake(0.0, 64.0, 320.0, 64.0)];
+//            } completion:^(BOOL finished) {
+//                [[NSNotificationCenter defaultCenter] postNotificationName:SwipeDidExitEditingModeNotification object:nil];
+//            }];
+//        }
     });
 }
 
