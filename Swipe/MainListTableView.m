@@ -30,19 +30,9 @@
                                                           [self reloadData];
         }];
 
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(handleSwipeNotification:)
-                                                     name:SwipeShouldEnterEditingModeNotification
-                                                   object:nil];
     }
     return self;
 }
-
-- (void)handleSwipeNotification:(NSNotification *)notification
-{
-
-}
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -67,8 +57,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:SwipeShouldEnterEditingModeNotification
-                                                        object:nil];
+
 }
 
 
@@ -102,8 +91,4 @@
     return frame.size.height + inset + inset + 2.0; // 2 is buffer
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIContentSizeCategoryDidChangeNotification object:nil];
-}
 @end

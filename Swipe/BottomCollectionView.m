@@ -30,38 +30,12 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(handleSwipeNotification:)
-//                                                 name:SwipeShouldEnterEditingModeNotification
-//                                               object:nil];
 }
 
-- (void)handleSwipeNotification:(NSNotification *)notification
-{
-//    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-
-//    [self.collectionViewLayout invalidateLayout];
-
-    if ([notification.name isEqualToString:SwipeShouldEnterEditingModeNotification]) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [UIView animateWithDuration:0.25
-//                             animations:^{
-//                                 [self setFrame:CGRectMake(0.0, 20.0, screenSize.width, screenSize.height - 20.0)];
-//                             }];
-//        });
-    }else if ([notification.name isEqualToString:SwipeShouldExitEditingModeNotification]) {
-//        [UIView animateWithDuration:0.25
-//                         animations:^{
-//                             [self setFrame:CGRectMake(0.0, 128.0, screenSize.width, screenSize.height - 128.0)];
-//        } completion:nil];
-    }
-}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
     return [self numberOfLists] + 2;
 }
 
