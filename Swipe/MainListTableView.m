@@ -57,16 +57,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:SwipeShouldEnterEditingModeNotification object:nil];
+    
+    [self beginUpdates];
+    [self setExpandedIndexPath:indexPath];
+    [self endUpdates];
 
+    [UIView animateKeyframesWithDuration:0.25 delay:0.0 options:kNilOptions animations:^{
+        [self setContentInset:UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)];
+    } completion:nil];
+    [self scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    if ([indexPath compare:self.expandedIndexPath] == NSOrderedSame) {
+        return self.bounds.size.height;
+    }
+
+    return 50.0;
 //    return 70.0;
 //    EKReminder *reminder = (EKReminder *)self.reminders[indexPath.row];
 //    return [self heightOfCellWithText:reminder.title withAttibutes:[self stringAttributes]];
-//}
+}
 
 - (NSDictionary *)stringAttributes
 {

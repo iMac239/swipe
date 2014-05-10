@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		003FBA83191B2FE2009A845B /* MainListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 003FBA82191B2FE2009A845B /* MainListTableView.m */; };
 		003FBA90191B6A69009A845B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 003FBA8F191B6A69009A845B /* Constants.m */; };
+		00483CC4191DF0CB001A5D5B /* ReminderDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00483CC3191DF0CB001A5D5B /* ReminderDetailView.m */; };
 		004D224D191810D50000E2F9 /* AddEditListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224C191810D50000E2F9 /* AddEditListPage.m */; };
 		004D2250191810E00000E2F9 /* SettingsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D224F191810E00000E2F9 /* SettingsPage.m */; };
 		004D2253191872C70000E2F9 /* AddEditCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D2252191872C70000E2F9 /* AddEditCollectionCell.m */; };
@@ -52,6 +53,8 @@
 		003FBA82191B2FE2009A845B /* MainListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListTableView.m; sourceTree = "<group>"; };
 		003FBA8E191B6A69009A845B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		003FBA8F191B6A69009A845B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		00483CC2191DF0CB001A5D5B /* ReminderDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderDetailView.h; sourceTree = "<group>"; };
+		00483CC3191DF0CB001A5D5B /* ReminderDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderDetailView.m; sourceTree = "<group>"; };
 		004D224B191810D50000E2F9 /* AddEditListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditListPage.h; sourceTree = "<group>"; };
 		004D224C191810D50000E2F9 /* AddEditListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditListPage.m; sourceTree = "<group>"; };
 		004D224E191810E00000E2F9 /* SettingsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPage.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				003FBA82191B2FE2009A845B /* MainListTableView.m */,
 				00A6FE0D191A02D200ED7E48 /* ReminderTableViewCell.h */,
 				00A6FE0E191A02D200ED7E48 /* ReminderTableViewCell.m */,
+				00483CC2191DF0CB001A5D5B /* ReminderDetailView.h */,
+				00483CC3191DF0CB001A5D5B /* ReminderDetailView.m */,
 				004D224B191810D50000E2F9 /* AddEditListPage.h */,
 				004D224C191810D50000E2F9 /* AddEditListPage.m */,
 				004D2251191872C70000E2F9 /* AddEditCollectionCell.h */,
@@ -328,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A4F5471916E03D0068AB66 /* LXReorderableCollectionViewFlowLayout.m in Sources */,
+				00483CC4191DF0CB001A5D5B /* ReminderDetailView.m in Sources */,
 				00A4F5241916DEAE0068AB66 /* SWViewController.m in Sources */,
 				00A4F51E1916DEAE0068AB66 /* SWAppDelegate.m in Sources */,
 				004D2250191810E00000E2F9 /* SettingsPage.m in Sources */,

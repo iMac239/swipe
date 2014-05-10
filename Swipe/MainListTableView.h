@@ -11,5 +11,6 @@
 @interface MainListTableView : UITableView
 
 @property (strong, nonatomic) NSArray *reminders;
+@property (strong, nonatomic) NSIndexPath *expandedIndexPath;
 
 @end

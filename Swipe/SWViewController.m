@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *topCollectionContainer;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *bottomCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *topCollectionView;
 @property (weak, nonatomic) IBOutlet UIScrollView *mainContentScrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentViewForScrollView;
 
@@ -39,6 +40,21 @@
     [self.mainContentScrollView setContentSize:size];
     [self.contentViewForScrollView setTranslatesAutoresizingMaskIntoConstraints:YES];
     [self.contentViewForScrollView setFrame:CGRectMake(0.0, 0.0, self.mainContentScrollView.contentSize.width, self.mainContentScrollView.contentSize.height)];
+    [self.topCollectionView setContentOffset:self.topCollectionView.contentOffset];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(swipeNotificationReceived:)
+                                                 name:SwipeShouldEnterEditingModeNotification
+                                               object:nil];
+}
+
+- (void)swipeNotificationReceived:(NSNotification *)notification
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([notification.name isEqualToString:SwipeShouldEnterEditingModeNotification]) {
+            [self.mainContentScrollView setContentOffset:CGPointMake(0.0, 128.0) animated:YES];
+        }
+    });
 }
 
 - (void)viewWillAppear:(BOOL)animated
